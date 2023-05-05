@@ -17,17 +17,17 @@ namespace rcCryptor
             InitializeComponent();
         }
 
-        private string GetKey(string text) 
+        private string GetKeyMD5(string text) 
         {
             return CryptlockMD5(text).Substring(0, 32);
         }
 
-        private string GetVector(string text)
+        private string GetVectorMD5(string text)
         {
             return CryptlockMD5(text).Substring(0, 16);
         }
 
-        private string GetSalt(string text)
+        private string GetSaltMD5(string text)
         {
             return CryptlockMD5(text).Substring(0, 16);
         }
@@ -93,10 +93,10 @@ namespace rcCryptor
             txbHashUserPwd.Text = hashUserPwd;
             txbHashPwdUser.Text = hashPwdUser;
 
-            string crpUser = Encrypt(user, GetKey(user), GetVector(user));
-            string crpPwd = Encrypt(pwd, GetKey(pwd), GetVector(pwd));
-            string crpUserPwd = Encrypt(userPwd, GetKey(userPwd), GetVector(userPwd));
-            string crpPwdUser = Encrypt(pwdUser, GetKey(pwdUser), GetVector(pwdUser));
+            string crpUser = Encrypt(user, GetKeyMD5(user), GetVectorMD5(user));
+            string crpPwd = Encrypt(pwd, GetKeyMD5(pwd), GetVectorMD5(pwd));
+            string crpUserPwd = Encrypt(userPwd, GetKeyMD5(userPwd), GetVectorMD5(userPwd));
+            string crpPwdUser = Encrypt(pwdUser, GetKeyMD5(pwdUser), GetVectorMD5(pwdUser));
 
             txbCrpUser.Text = crpUser;
             txbCrpPwd.Text = crpPwd;
@@ -114,7 +114,7 @@ namespace rcCryptor
             string result = null;
             string saltText = null;
 
-            saltText = GetSalt(text);
+            saltText = GetSaltMD5(text);
 
             if (!String.IsNullOrEmpty(text)) {
                 int textSize = text.Length;
