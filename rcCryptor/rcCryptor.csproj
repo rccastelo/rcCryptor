@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\rcCryptography\rcCryptography\rcCryptography.csproj" />
+  </ItemGroup>
+
 </Project>

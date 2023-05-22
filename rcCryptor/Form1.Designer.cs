@@ -57,7 +57,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.txbEncKey = new System.Windows.Forms.TextBox();
+            this.txbKeyVectorText = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
@@ -314,19 +314,19 @@
             // 
             // txbEncKey
             // 
-            this.txbEncKey.Location = new System.Drawing.Point(371, 549);
-            this.txbEncKey.Name = "txbEncKey";
-            this.txbEncKey.Size = new System.Drawing.Size(261, 23);
-            this.txbEncKey.TabIndex = 4;
+            this.txbKeyVectorText.Location = new System.Drawing.Point(371, 549);
+            this.txbKeyVectorText.Name = "txbEncKey";
+            this.txbKeyVectorText.Size = new System.Drawing.Size(261, 23);
+            this.txbKeyVectorText.TabIndex = 4;
             // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.Location = new System.Drawing.Point(371, 531);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(64, 15);
+            this.label19.Size = new System.Drawing.Size(145, 15);
             this.label19.TabIndex = 1;
-            this.label19.Text = "Key/Vector";
+            this.label19.Text = "Normal Text to Key/Vector";
             // 
             // button2
             // 
@@ -443,7 +443,7 @@
             this.Controls.Add(this.label20);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.txbEncKey);
+            this.Controls.Add(this.txbKeyVectorText);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
@@ -475,7 +475,6 @@
             this.Controls.Add(this.txbUser);
             this.Name = "Form1";
             this.Text = "rcCryptor";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -512,7 +511,7 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txbEncKey;
+        private System.Windows.Forms.TextBox txbKeyVectorText;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label20;
